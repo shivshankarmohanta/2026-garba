@@ -5,7 +5,7 @@ document.getElementById("ticketForm").addEventListener("submit", function(e){
   let ticketData = { name, phone, ticketId: Date.now() };
 
   // Send to Google Sheet
-  fetch("https://script.google.com/macros/s/AKfycbzmXDWkRa16iMKa3N6jE4unQ-auH3gbPY7qzOSdBmjyXcfI18dAdidMTDZplRA_-hOKkA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbzYNXbofPBIgSthu4UCI0CIcApU-g5Esu02otGZExXzE9EbwWb81R8KGAuMhvWziKMmAg/exec", {
     method: "POST",
     body: JSON.stringify(ticketData)
   });

@@ -4,13 +4,13 @@ document.getElementById("ticketForm").addEventListener("submit", function(e){
   let phone = document.getElementById("phone").value;
   let ticketData = { name, phone, ticketId: Date.now() };
 
-  // Send to Google Sheet
-  fetch("https://script.google.com/macros/s/AKfycbzYNXbofPBIgSthu4UCI0CIcApU-g5Esu02otGZExXzE9EbwWb81R8KGAuMhvWziKMmAg/exec", {
+  // Send to Google Sheet via Apps Script Web App
+  fetch("https://script.google.com/macros/s/AKfycbzz6jUiyrXbmGzQUGDo5pawTAPfn6CHczoFwq6h0JIW_ujz_6puiOa_jzmA1XRL15jtHw/exec", {
     method: "POST",
     body: JSON.stringify(ticketData)
   });
 
-  // Generate QR
+  // Generate QR for ticket
   let qrContainer = document.getElementById("ticket");
   qrContainer.innerHTML = "";
   QRCode.toCanvas(ticketData.ticketId.toString(), { width: 200 }, function (err, canvas) {

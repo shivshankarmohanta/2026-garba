@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Garba Night Tickets</title>
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
-    <script src="script.js"></script>
+  <title>Garba Night Tickets</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
 </head>
-
 <body>
-    <h2>Garba Night Ticket Booking</h2>
+  <h2>Garba Night Ticket Booking</h2>
 
-    <h3>Step 1: Pay via PhonePe</h3>
-    <p>Scan this QR to pay ₹250</p>
-    <!-- Replace with your actual PhonePe QR image -->
-    <img src="phonepe-barcode.png" width="200">
+  <h3>Step 1: Pay via PhonePe</h3>
+  <p>Scan this QR to pay ₹250</p>
+  <img src="phonepe-barcode.png" width="200">
 
-    <h3>Step 2: Enter Details</h3>
-    <form id="ticketForm">
-        Name: <input type="text" id="name" required><br><br>
-        Phone: <input type="text" id="phone" required><br><br>
-        <button type="submit">I Have Paid</button>
-    </form>
+  <h3>Step 2: Enter Details</h3>
+  <form id="ticketForm">
+    Name: <input type="text" id="name" required><br><br>
+    Phone: <input type="text" id="phone" required><br><br>
+    <button type="submit">I Have Paid</button>
+  </form>
 
-    <div id="ticket"></div>
+  <div id="ticket"></div>
 </body>
-
 </html>
